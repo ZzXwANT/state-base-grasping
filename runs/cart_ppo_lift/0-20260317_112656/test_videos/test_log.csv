@@ -1,0 +1,6 @@
+seed,success,steps,total_reward,video_path,duration_s
+9834,1,70,45.6025,./runs/ppo_lift_cart/20260317_112656/test_videos/45.60_test_9834.mp4,4.68
+6799,1,73,46.8174,./runs/ppo_lift_cart/20260317_112656/test_videos/46.82_test_6799.mp4,2.45
+6915,1,73,46.8622,./runs/ppo_lift_cart/20260317_112656/test_videos/46.86_test_6915.mp4,2.42
+9533,1,71,45.5949,./runs/ppo_lift_cart/20260317_112656/test_videos/45.59_test_9533.mp4,2.42
+4043,1,73,46.7005,./runs/ppo_lift_cart/20260317_112656/test_videos/46.70_test_4043.mp4,2.48

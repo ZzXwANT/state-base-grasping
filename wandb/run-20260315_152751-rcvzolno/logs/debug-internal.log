@@ -1,0 +1,12 @@
+{"time":"2026-03-15T15:27:51.353074777+08:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-15T15:27:51.823585217+08:00","level":"INFO","msg":"stream: created new stream","id":"rcvzolno"}
+{"time":"2026-03-15T15:27:51.823714837+08:00","level":"INFO","msg":"handler: started","stream_id":"rcvzolno"}
+{"time":"2026-03-15T15:27:51.823984698+08:00","level":"INFO","msg":"stream: started","id":"rcvzolno"}
+{"time":"2026-03-15T15:27:51.824050119+08:00","level":"INFO","msg":"writer: started","stream_id":"rcvzolno"}
+{"time":"2026-03-15T15:27:51.824085649+08:00","level":"INFO","msg":"sender: started","stream_id":"rcvzolno"}
+{"time":"2026-03-15T15:27:54.497395654+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-15T15:27:55.200901806+08:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-15T15:27:55.213625958+08:00","level":"INFO","msg":"stream: closing","id":"rcvzolno"}
+{"time":"2026-03-15T15:27:55.213660288+08:00","level":"INFO","msg":"handler: closed","stream_id":"rcvzolno"}
+{"time":"2026-03-15T15:27:55.213764804+08:00","level":"INFO","msg":"sender: closed","stream_id":"rcvzolno"}
+{"time":"2026-03-15T15:27:55.213784571+08:00","level":"INFO","msg":"stream: closed","id":"rcvzolno"}

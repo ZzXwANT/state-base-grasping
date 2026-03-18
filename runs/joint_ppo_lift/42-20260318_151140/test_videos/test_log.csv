@@ -1,0 +1,6 @@
+seed,success,steps,total_reward,video_path,duration_s
+4668,0,256,35.5067,./runs/joint_ppo_lift/42-20260318_151140/test_videos/35.51_test_4668.mp4,6.85
+2444,1,91,49.5833,./runs/joint_ppo_lift/42-20260318_151140/test_videos/49.58_test_2444.mp4,2.43
+3018,1,88,48.2276,./runs/joint_ppo_lift/42-20260318_151140/test_videos/48.23_test_3018.mp4,2.44
+8660,1,93,49.2643,./runs/joint_ppo_lift/42-20260318_151140/test_videos/49.26_test_8660.mp4,2.44
+9794,1,88,46.3764,./runs/joint_ppo_lift/42-20260318_151140/test_videos/46.38_test_9794.mp4,2.49

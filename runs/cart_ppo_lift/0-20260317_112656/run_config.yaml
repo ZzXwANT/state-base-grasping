@@ -1,0 +1,31 @@
+timestamp: '2026-03-17 11:27:03'
+  obs: joint_pos eef_pos eef_quat cube_pos cub_quat
+config:
+  exp: ppo_lift
+  total_timesteps: 2000000
+  num_cpu: 6
+  env_config:
+    reward_shaping: true
+    control_freq: 20
+    horizon: 512
+    controller: cart
+  ppo_config:
+    seed: 0
+    policy: MlpPolicy
+    learning_rate: 0.0003
+    n_steps: 1024
+    batch_size: 256
+    n_epochs: 8
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    clip_range_vf: 0.2
+    ent_coef: 0.0
+    vf_coef: 0.5
+    max_grad_norm: 0.5
+    policy_kwargs:
+      net_arch:
+      - 64
+      - 64
+    verbose: 1
+    device: cpu

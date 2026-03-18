@@ -1,0 +1,17 @@
+{
+  "os":  "Linux-6.14.0-35-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-03-17T06:06:27.446742Z",
+  "program":  "/home/user/zhaozixin/proj/cloud-GPU-data/scripts/sync2wandb.py",
+  "codePath":  "scripts/sync2wandb.py",
+  "codePathLocal":  "scripts/sync2wandb.py",
+  "git":  {
+    "remote":  "git@github.com:ZzXwANT/cloud-GPU-data.git",
+    "commit":  "af9298db83335f00c11d3ac6580e04bf6a4f1e52"
+  },
+  "email":  "zixinzhao608@gmail.com",
+  "root":  "/home/user/zhaozixin/proj/cloud-GPU-data",
+  "host":  "aitechlab-System-Product-Name",
+  "executable":  "/home/user/zhaozixin/anaconda3/envs/grasp_env/bin/python",
+  "writerId":  "277ezijqq1azf3tipiorgiuzbywas091"
+}

@@ -1,0 +1,16 @@
+{"time":"2026-03-15T14:56:35.507381963+08:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-15T14:56:42.182730398+08:00","level":"INFO","msg":"stream: created new stream","id":"d76vctey"}
+{"time":"2026-03-15T14:56:42.217609937+08:00","level":"INFO","msg":"handler: started","stream_id":"d76vctey"}
+{"time":"2026-03-15T14:56:42.218267947+08:00","level":"INFO","msg":"stream: started","id":"d76vctey"}
+{"time":"2026-03-15T14:56:42.218530007+08:00","level":"INFO","msg":"writer: started","stream_id":"d76vctey"}
+{"time":"2026-03-15T14:56:42.218538147+08:00","level":"INFO","msg":"sender: started","stream_id":"d76vctey"}
+{"time":"2026-03-15T14:56:48.706424333+08:00","level":"ERROR","msg":"api: HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-03-15T14:56:48.706495708+08:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 404: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"entity Zixin Zhao not found during upsertBucket\",\"path\":[\"upsertBucket\"]}]}"}
+{"time":"2026-03-15T14:56:48.766146342+08:00","level":"ERROR","msg":"sender: uploadConfigFile: runhandle: run not yet initialized"}
+{"time":"2026-03-15T14:56:48.768633283+08:00","level":"ERROR","msg":"runfiles: runhandle: run not yet initialized"}
+{"time":"2026-03-15T14:56:48.78647367+08:00","level":"INFO","msg":"stream: closing","id":"d76vctey"}
+{"time":"2026-03-15T14:56:48.795711963+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-15T14:56:48.795779894+08:00","level":"INFO","msg":"handler: closed","stream_id":"d76vctey"}
+{"time":"2026-03-15T14:56:48.79593506+08:00","level":"INFO","msg":"sender: closed","stream_id":"d76vctey"}
+{"time":"2026-03-15T14:56:48.795980878+08:00","level":"INFO","msg":"stream: closed","id":"d76vctey"}
+{"time":"2026-03-15T14:56:48.844786251+08:00","level":"ERROR","msg":"stream: runURL: runhandle: run not yet initialized"}
