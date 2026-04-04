@@ -14,7 +14,7 @@ from package.utils.PeriodSaveCallback import PeriodicSaveCallback
 from package.utils.SyncEvalCallback import SyncEvalCallback
 from package.utils.config_save import save_run_config
 
-from package.envs.env_all_obs import RobosuiteLiftWrapper
+from package.envs.env_full_obs import RobosuiteLiftWrapper
 
 
 def set_global_seeds(seed: int):
@@ -109,7 +109,7 @@ if __name__ == "__main__":
     p.add_argument("--seed",              type=int,   default=0)
     p.add_argument("--num_cpu",           type=int,   default=6)
     p.add_argument("--total_timesteps",   type=int,   default=2_000_000)
-    p.add_argument("--learning_rate",     type=float, default=3e-4)
+    p.add_argument("--learning_rate",     type=float, default=3e-4)         
     p.add_argument("--buffer_size",       type=int,   default=1_000_000)
     p.add_argument("--learning_starts",   type=int,   default=10_000)
     p.add_argument("--batch_size",        type=int,   default=256)
@@ -118,8 +118,8 @@ if __name__ == "__main__":
     p.add_argument("--device",            type=str,   default="cuda")
     p.add_argument("--eval_steps",        type=int,   default=163840)
     p.add_argument("--model_save_freq",   type=int,   default=500_000)
-    p.add_argument("--action_penalty",    type=float, default=0.01)
-    p.add_argument("--action_smooth",     type=float, default=0.005)
+    p.add_argument("--action_penalty",    type=float, default=0.01)         # joint控制中可取消惩罚
+    p.add_argument("--action_smooth",     type=float, default=0.005)        
     p.add_argument("--kp",                type=float, default=150.0)
     p.add_argument("--reward_scale",      type=float, default=1.0)
     p.add_argument("--controller",        type=str,   default="cart", choices=["cart", "joint"])

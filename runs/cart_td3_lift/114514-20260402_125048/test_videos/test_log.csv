@@ -1,0 +1,6 @@
+seed,success,steps,total_reward,video_path,duration_s
+8332,0,256,21.6684,./runs/cart_td3_lift/114514-20260402_125048/test_videos/21.67_test_8332.mp4,8.52
+7116,1,76,44.7570,./runs/cart_td3_lift/114514-20260402_125048/test_videos/44.76_test_7116.mp4,2.85
+2996,1,82,45.7564,./runs/cart_td3_lift/114514-20260402_125048/test_videos/45.76_test_2996.mp4,2.97
+8438,1,73,44.3563,./runs/cart_td3_lift/114514-20260402_125048/test_videos/44.36_test_8438.mp4,2.88
+4282,1,77,45.6342,./runs/cart_td3_lift/114514-20260402_125048/test_videos/45.63_test_4282.mp4,3.00

@@ -14,7 +14,7 @@ from package.utils.PeriodSaveCallback import PeriodicSaveCallback
 from package.utils.SyncEvalCallback import SyncEvalCallback
 from package.utils.config_save import save_run_config
 
-from package.envs.env_all_obs import RobosuiteLiftWrapper
+from package.envs.env_full_obs import RobosuiteLiftWrapper
 
 
 def set_global_seeds(seed: int):
@@ -35,7 +35,7 @@ def main(args):
     env_config = dict(
         reward_shaping=True,
         control_freq=20,
-        horizon=512,
+        horizon=256,
         action_penalty=args.action_penalty,
         action_smooth=args.action_smooth,
         kp=args.kp,
@@ -50,14 +50,14 @@ def main(args):
         seed=args.seed,
         policy="MlpPolicy",
         learning_rate=args.learning_rate,
-        n_steps=1024,
+        n_steps=512,
         batch_size=256,
         n_epochs=8,
         gamma=0.99,
         gae_lambda=0.95,
         clip_range=0.2,
         clip_range_vf=0.2,
-        ent_coef=0.0,
+        ent_coef=0.0,               # 若一直无法grasp，尝试增大如0.01
         vf_coef=0.5,
         max_grad_norm=0.5,
         policy_kwargs=dict(net_arch=[64, 64]),
@@ -87,11 +87,11 @@ def main(args):
             deterministic=True,
             callback_on_new_best=SyncEvalCallback(save_path=eval_dir),
         ),
-        PeriodicSaveCallback(
-            save_freq=args.model_save_freq,
-            save_dir=os.path.join(model_dir, "checkpoints"),
-            name_prefix="ppo",
-        ),
+        # PeriodicSaveCallback(
+        #     save_freq=args.model_save_freq,
+        #     save_dir=os.path.join(model_dir, "checkpoints"),
+        #     name_prefix="ppo",
+        # ),
     ])
 
     model = PPO(env=train_env, tensorboard_log=tb_log_dir, **ppo_config)
@@ -108,10 +108,10 @@ def main(args):
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--exp_name",          type=str,   default="ppo_lift")
-    p.add_argument("--seed",              type=int,   default=42)
+    p.add_argument("--seed",              type=int,   default=0)
     p.add_argument("--num_cpu",           type=int,   default=6)
     p.add_argument("--total_timesteps",   type=int,   default=2_000_000)
-    p.add_argument("--learning_rate",     type=float, default=3e-4)
+    p.add_argument("--learning_rate",     type=float, default=3e-4)         # kl散度过大时尝试调小，如1e-4
     p.add_argument("--device",            type=str,   default="cpu")
     p.add_argument("--eval_steps",        type=int,   default=163840)
     p.add_argument("--model_save_freq",   type=int,   default=500_000)

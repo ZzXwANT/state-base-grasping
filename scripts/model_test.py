@@ -6,7 +6,7 @@ import imageio
 import numpy as np
 from stable_baselines3 import PPO, TD3, SAC
 
-from package.envs.env_all_obs import RobosuiteLiftWrapper
+from package.envs.env_full_obs import RobosuiteLiftWrapper
 
 def run_tests(
     vecnorm_path,
@@ -111,9 +111,9 @@ def run_tests(
 
 
 if __name__ == "__main__":
-    controller = "joint"
-    alg = PPO 
-    BASE_DIR    = f"./runs/{controller}_{alg.__name__.lower()}_lift/42-20260318_151140"
+    controller = "cart"
+    alg = TD3 
+    BASE_DIR    = f"./runs/{controller}_{alg.__name__.lower()}_lift/114514-20260402_125048"
     MODEL_PATH  = os.path.join(BASE_DIR, "models/eval/best_model.zip")
     NORMAL_PATH = os.path.join(BASE_DIR, "models/eval/best_vecnormalize.pkl")
     OUT_DIR     = os.path.join(BASE_DIR, "test_videos")
