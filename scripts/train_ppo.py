@@ -57,7 +57,7 @@ def main(args):
         gae_lambda=0.95,
         clip_range=0.2,
         clip_range_vf=0.2,
-        ent_coef=0.0,               # 若一直无法grasp，尝试增大如0.01
+        ent_coef=0.01,               # 若一直无法grasp，尝试增大如0.01
         vf_coef=0.5,
         max_grad_norm=0.5,
         policy_kwargs=dict(net_arch=[64, 64]),
