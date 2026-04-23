@@ -1,0 +1,39 @@
+timestamp: '2026-04-03 13:00:24'
+config:
+  exp: ppo_lift
+  total_timesteps: 2000000
+  num_cpu: 6
+  norm_train:
+    norm_obs: true
+    norm_reward: true
+    clip_obs: 10.0
+    training: true
+  env_config:
+    reward_shaping: true
+    control_freq: 20
+    horizon: 256
+    action_penalty: 0
+    action_smooth: 0
+    kp: 150.0
+    reward_scale: 1.0
+    controller: cart
+  ppo_config:
+    seed: 42
+    policy: MlpPolicy
+    learning_rate: 0.0003
+    n_steps: 512
+    batch_size: 256
+    n_epochs: 8
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    clip_range_vf: 0.2
+    ent_coef: 0.0
+    vf_coef: 0.5
+    max_grad_norm: 0.5
+    policy_kwargs:
+      net_arch:
+      - 64
+      - 64
+    verbose: 1
+    device: cpu

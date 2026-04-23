@@ -57,7 +57,7 @@ def main(args):
         gae_lambda=0.95,
         clip_range=0.2,
         clip_range_vf=0.2,
-        ent_coef=0.01,               # 若一直无法grasp，尝试增大如0.01
+        ent_coef=0.0,               # 若一直无法grasp，尝试增大如0.01
         vf_coef=0.5,
         max_grad_norm=0.5,
         policy_kwargs=dict(net_arch=[64, 64]),
@@ -115,8 +115,8 @@ if __name__ == "__main__":
     p.add_argument("--device",            type=str,   default="cpu")
     p.add_argument("--eval_steps",        type=int,   default=163840)
     p.add_argument("--model_save_freq",   type=int,   default=500_000)
-    p.add_argument("--action_penalty",    type=float, default=0)
-    p.add_argument("--action_smooth",     type=float, default=0)
+    p.add_argument("--action_penalty",    type=float, default=0.01)
+    p.add_argument("--action_smooth",     type=float, default=0.005)
     p.add_argument("--kp",                type=float, default=150.0)
     p.add_argument("--reward_scale",      type=float, default=1.0)
     p.add_argument("--controller",        type=str,   default="cart", choices=["cart", "joint"])

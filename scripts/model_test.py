@@ -113,7 +113,7 @@ def run_tests(
 if __name__ == "__main__":
     controller = "cart"
     alg = TD3 
-    BASE_DIR    = f"./runs/{controller}_{alg.__name__.lower()}_lift/114514-20260402_125048"
+    BASE_DIR    = f"./runs/{controller}_{alg.__name__.lower()}_lift/0-20260317_172814"
     MODEL_PATH  = os.path.join(BASE_DIR, "models/eval/best_model.zip")
     NORMAL_PATH = os.path.join(BASE_DIR, "models/eval/best_vecnormalize.pkl")
     OUT_DIR     = os.path.join(BASE_DIR, "test_videos")

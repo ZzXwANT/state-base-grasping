@@ -118,9 +118,9 @@ if __name__ == "__main__":
     p.add_argument("--device",            type=str,   default="cuda")
     p.add_argument("--eval_steps",        type=int,   default=163840)
     p.add_argument("--model_save_freq",   type=int,   default=500_000)
-    p.add_argument("--action_penalty",    type=float, default=0.01)         # joint控制中可取消惩罚
-    p.add_argument("--action_smooth",     type=float, default=0.005)        
+    p.add_argument("--action_penalty",    type=float, default=0.0)         # joint控制中可取消惩罚
+    p.add_argument("--action_smooth",     type=float, default=0.0)        
     p.add_argument("--kp",                type=float, default=150.0)
     p.add_argument("--reward_scale",      type=float, default=1.0)
-    p.add_argument("--controller",        type=str,   default="cart", choices=["cart", "joint"])
+    p.add_argument("--controller",        type=str,   default="joint", choices=["cart", "joint"])
     main(p.parse_args())
