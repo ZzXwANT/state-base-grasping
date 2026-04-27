@@ -3,7 +3,7 @@ import gymnasium as gym
 from gymnasium import spaces
 
 import robosuite as suite
-from robosuite.environments.manipulation.lift_custom import LiftCustom
+from lift_custom import LiftCustom
 suite.environments.base.REGISTERED_ENVS["lift_custom"] = LiftCustom
 
 from robosuite.controllers import load_composite_controller_config
